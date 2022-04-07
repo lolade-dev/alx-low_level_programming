@@ -1,8 +1,8 @@
 #include <stdio.h>
-/*
- * main - This is the entry point
+/**
+ * main - Used the puts function
  *
- * Return: Always 0 (Success)
+ * Return: Always 0
  */
 int main(void)
 {
