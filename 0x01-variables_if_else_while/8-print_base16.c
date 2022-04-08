@@ -6,33 +6,14 @@
  */
 int main(void)
 {
-	long ch, hex;
+	char ch, hex;
 
-	for (ch = '0'; ch < '16'; ch++)
+	for (ch = '0'; ch <= '9'; ch++)
 	{
-		switch (ch)
-		{
-			case '10':
-				hex = 'a';
-				break;
-			case '11':
-				hex = 'b';
-				break;
-			case '12':
-				hex = 'c';
-				break;
-			case '13':
-				hex = 'd';
-				break;
-			case '14':
-				hex = 'e';
-				break;
-			case '15':
-				hex = 'f';
-				break;
-			default:
-				hex = ch;
-		}
+		putchar(ch);
+	}
+	for (hex = 'a'; hex <= 'f'; hex;)
+	{
 		putchar(hex);
 	}
 	putchar('\n');
