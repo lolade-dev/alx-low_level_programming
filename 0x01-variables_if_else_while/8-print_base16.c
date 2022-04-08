@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	int ch, hex;
+	long ch, hex;
 
 	for (ch = '0'; ch < '16'; ch++)
 	{
