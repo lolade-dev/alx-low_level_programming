@@ -12,7 +12,7 @@ int main(void)
 	{
 		putchar(ch);
 	}
-	for (hex = 'a'; hex <= 'f'; hex++;)
+	for (hex = 'a'; hex <= 'f'; hex++)
 	{
 		putchar(hex);
 	}
