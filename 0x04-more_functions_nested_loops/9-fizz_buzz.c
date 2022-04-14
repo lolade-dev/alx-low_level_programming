@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 /**
  * main - This replaces multiples of 3 with fizz and 5 with buzz
