@@ -4,5 +4,6 @@
 #include <stdio.h>
 
 void postive_or_integer(int i);
+int largest_number(int a, int b, int c);
 
 #endif /* MAIN_H */
