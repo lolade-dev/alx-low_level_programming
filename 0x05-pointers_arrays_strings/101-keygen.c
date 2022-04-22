@@ -8,26 +8,23 @@
  */
 void keyGen(int N)
 {
-	int i = 0;
+	int i, randomizer;
 
-	int randomizer = 0;
+	char numbers[], letter[], LETTER[], symbols[], password[N];
 
 	srand((unsigned int)(time(NULL)));
 
 	/* Array of numbers*/
-	char numbers[] = "0123456789";
+	numbers[] = "0123456789";
 
 	/* Array of lowercase alphabets*/
-	char letter[] = "abcdefghijklmnoqprstuvwyzx";
+	letter[] = "abcdefghijklmnoqprstuvwyzx";
 
 	/* Array of uppercase alphabets*/
-	char LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
+	LETTER[] = "ABCDEFGHIJKLMNOQPRSTUYWVZX";
 
 	/* Array of all the special symbols*/
-	char symbols[] = "!@#$^&*?";
-
-	/* Stores the random password*/
-	char password[N];
+	symbols[] = "!@#$^&*?";
 
 	/* To select the randomizer inside the loop*/
 	randomizer = rand() % 4;
