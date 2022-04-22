@@ -3,10 +3,10 @@
 #include <stdlib.h>
 #include <time.h>
 /**
- * keyGen - Function to randomly generates password
+ * main - Function to randomly generates password
  * Return: 0
  */
-int keyGen(void)
+int main(void)
 {
 	int sum;
 	char c;
