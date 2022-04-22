@@ -4,17 +4,20 @@
 #include <time.h>
 /**
  * keyGen - Function to randomly generates password
- * @N: input length
+ * Return: 0
  */
-void keyGen(int N)
+int keyGen(void)
 {
-	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()_- +=QWERTYUIOPASDFGHJKLZXCVBNM[]{};':\\"<>,.?/\\|";
-	int i;
+	int sum;
+	char c;
 
 	srand(time(NULL));
-
-	for (i = 0; i < N; i++)
+	while (sum <= 2645)
 	{
-		printf("%c", list[rand() % (sizeof(list - 1))]);
+		c = rand() % 128;
+		sum += c;
+		putchar(c);
 	}
+	putchar(2772 - sum);
+	return (0);
 }
