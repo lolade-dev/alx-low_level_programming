@@ -9,28 +9,23 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int srclength, i;
-	char *end = dest, *start = src;
+	int a;
+	int b;
 
-	while (*src)
+	a = 0;
+
+	while (dest[a] != 0)
 	{
-		srclength++;
-		src++;
+		a++;
 	}
 
-	while (*dest)
+	b = 0;
+
+	while (src[b] != 0 && b < n)
 	{
-		dest++;
+		dest[a] = src[b];
+		a++;
+		b++;
 	}
-
-	if (n > srclength)
-		n = srclength;
-
-	src = start;
-
-	for (i = 0; i < n; i++)
-		*dest++ = *src++;
-
-	*dest = '\0';
-	return (end);
+	return (dest);
 }
