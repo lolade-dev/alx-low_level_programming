@@ -6,3 +6,4 @@ int wrapper(int n, int guess);
 int is_prime_number(int n);
 int divide_number(int n, int guess);
 int _strlen_recursion(char *s);
+int count_letters(int i, char *s);
