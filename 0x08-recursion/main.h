@@ -1,3 +1,5 @@
 int _putchar(char c);
 int factorial(int n);
 int _pow_recursion(int x, int y);
+int _sqrt_recursion(int n);
+int wrapper(int n, int guess);
