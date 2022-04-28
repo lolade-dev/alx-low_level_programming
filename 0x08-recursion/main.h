@@ -7,3 +7,5 @@ int is_prime_number(int n);
 int divide_number(int n, int guess);
 int _strlen_recursion(char *s);
 int count_letters(int i, char *s);
+void _puts_recursion(char *s);
+void _print_rev_recursion(char *s);
