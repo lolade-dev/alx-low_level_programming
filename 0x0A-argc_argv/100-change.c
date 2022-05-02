@@ -9,52 +9,46 @@
  * Return: Return always success.
 **/
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-	int cents, coins = 0;
+	int amount, coins = 0;
 
 	if (argc == 2)
 	{
-		cents = atoi(*(argv + 1));
-		while (cents > 0)
+		amount = atoi(argv[1]);
+		if (amount < 0)
 		{
-			if (cents < 0)
-			{
-				printf("%d\n", 0);
-				return (0);
-			}
-			if (cents % 25 < cents)
-			{
-				cents -= 25;
-				coins++;
-			}
-			else if (cents % 10 < cents)
-			{
-				cents -= 10;
-				coins++;
-			}
-			else if (cents % 5 < cents)
-			{
-				cents -= 5;
-				coins++;
-			}
-			else if (cents % 2 < cents)
-			{
-				cents -= 2;
-				coins++;
-			}
-			else if (cents % 1 < cents)
-			{
-				cents -= 1;
-				coins++;
-			}
+			printf("%d\n", 0);
+			return (0);
 		}
+		if (amount % 25 >= 0)
+		{
+			coins += amount / 25;
+			amount = amount % 25;
+		}
+		if (amount % 10 >= 0)
+		{
+			coins += amount / 10;
+			amount = amount % 10;
+		}
+		if (amount % 5 >= 0)
+		{
+			coins += amount / 5;
+			amount = amount % 5;
+		}
+		if (amount % 2 >= 0)
+		{
+			coins += amount / 2;
+			amount = amount % 2;
+		}
+		if (amount % 1 >= 0)
+			coins += amount;
+		printf("%d\n", coins);
+		return (0);
 	}
 	else
 	{
 		printf("Error\n");
 		return (1);
 	}
-	printf("%d\n", coins);
-	return (0);
 }
