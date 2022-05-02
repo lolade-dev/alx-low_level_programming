@@ -1,14 +1,14 @@
 #include "stdio.h"
 /**
- * main - entry point
+ * main - Entry point
  * @argc: counter
  * @argv: array
  * Return: Always 0
  */
 int main(int argc, char *argv[])
 {
-	int i = argc - argc;
+	(void)argv;
 
-	printf("%s\n", argv[i]);
+	printf("%d\n", argc - 1);
 	return (0);
 }
