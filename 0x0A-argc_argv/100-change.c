@@ -43,6 +43,11 @@ int main(int argc, char *argv[])
 				cents -= 1;
 				coins++;
 			}
+			else if (cents < 0)
+			{
+				printf("%d\n", 0);
+				return (0);
+			}
 		}
 	}
 	else
