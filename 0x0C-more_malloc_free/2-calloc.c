@@ -5,6 +5,7 @@
  * _calloc - entry point: allocates memory for an array, using malloc
  * @nmemb: number of elements in the array
  * @size: size in bytes of the elements
+ * Return: returns pointer to allocated space, or NULL on failure
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
