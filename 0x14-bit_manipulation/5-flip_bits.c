@@ -9,13 +9,13 @@
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-	unsigned int flips = 0;
+	unsigned int flips = 0, i;
 	unsigned long int xor = (n ^ m);
-	unsigned long int max = 0x01;
+	unsigned long int max = 1;
 
-	while (max <= xor)
+	for (i = 0; i < (sizeof(unsigned long int) * 8); i++)
 	{
-		if (max & xor)
+		if (max == (xor & max))
 			flips++;
 		max <<= 1;
 	}
