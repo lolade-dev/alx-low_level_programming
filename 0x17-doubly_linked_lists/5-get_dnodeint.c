@@ -7,18 +7,17 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-	unsigned int sum;
-	dlistint_t *temp;
+	unsigned int i;
 
 	if (head == NULL)
 		return (NULL);
-	temp = head;
-	while (temp)
+	if (index == 0)
+		return (head);
+	for (i = 0; i < index; i++)
 	{
-		if (index == sum)
-			return (temp);
-		sum++;
-		temp = temp->next;
+		if (head->next == NULL)
+			return (NULL);
+		head = head->next;
 	}
-	return (NULL);
+	return (head);
 }
